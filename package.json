@@ -1,16 +1,26 @@
 {
   "name": "nextage",
   "version": "1.0.0",
-  "description": "",
+  "description": "Game library manager",
   "license": "ISC",
-  "author": "",
+  "author": "vsawyer",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "main.ts",
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "electron . --dev"
   },
   "devDependencies": {
-    "electron": "^36.3.1"
+    "@types/node": "^22.15.24",
+    "electron": "^36.3.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.5.0",
+    "node-fetch": "^3.3.2"
   }
 }

@@ -1,0 +1,7 @@
+{
+  "include": [
+    "main.ts",
+    "preload.ts",
+    "other-files-or-folders/**/*.ts"
+  ]
+}
