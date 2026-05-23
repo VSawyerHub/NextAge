@@ -1,40 +1,12 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <title>Electron App</title>
-</head>
-<body>
-<h1>Login</h1>
-<form id="loginForm">
-    <input type="text" id="username" placeholder="Username" required />
-    <input type="password" id="password" placeholder="Password" required />
-    <button type="submit">Login</button>
-</form>
-<script>
-    document.getElementById('loginForm').onsubmit = async (event) => {
-        event.preventDefault();
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
-
-        try {
-            const data = await window.auth.login({ username, password });
-            console.log('Login successful:', data);
-            // Redirect or update UI
-        } catch (error) {
-            console.error('Login failed:', error);
-        }
-    };
-</script>
-</body>
-<body>
-<h1>Home</h1>
-<button id="goToProfile">Go to Profile</button>
-<script>
-    document.getElementById('goToProfile').onclick = () => {
-        window.navigation.navigate('profile');
-    };
-</script>
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NextAge</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
